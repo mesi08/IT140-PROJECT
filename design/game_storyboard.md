@@ -5,49 +5,62 @@
 
 ## Theme and Storyline
 
-**Theme:**
+**Theme:*Haunted Mansion Adventure is a mystery and survival game that takes place inside an abandoned mansion. The player must explore different rooms, find hidden objects, and avoid the ghost haunting the mansion.
+*
 
-TODO: Name and briefly describe your game's theme.
 
-**Storyline:**
 
-TODO: In one short paragraph, explain the setting, the player's goal, the items
-the player must gather, and the threat created by the villain.
 
-## Rooms
 
+
+The player enters an abandoned mansion after hearing rumors about hidden treasures and a ghost that haunts the property. The player becomes trapped inside and must explore eight different rooms to collect six important items needed to escape. Each item brings the player closer to unlocking the mansion's exit. However, a dangerous ghost is roaming the mansion. If the player enters the ghost's room before collecting all six items, the game ends and the player loses. The goal is to collect every item and escape the mansion safely.
+
+##
 Project One requires a minimum of eight rooms.
 
-1. TODO: Start room
-2. TODO: Room
-3. TODO: Room
-4. TODO: Room
-5. TODO: Room
-6. TODO: Room
-7. TODO: Room
-8. TODO: Villain room
 
-Add more rooms if your design needs them.
+## 
+1. Start Room- Entrance Foyer
+2.  Living Room
+3. Kitchen
+4. Library
+5. Dining Room
+6. Master Bedroom
+7. Basement
+8. Attic- Ghost's Room
 
-## Items
+
+
+
+
 
 With the minimum eight-room design, Project One requires at least six items.
 Every room except the start room and villain room must contain one item.
 
-1. TODO: Item
-2. TODO: Item
-3. TODO: Item
-4. TODO: Item
-5. TODO: Item
-6. TODO: Item
 
-If you add rooms beyond the minimum, add an item for every additional room
-except the start room and villain room.
+Room
+    
+Living Room
 
+Kitchen
+
+Library
+
+Dining Room
+
+Master Bedroom
+
+Basement
+
+	Collectible item
+	Antique Key
+	Flashlight
+	Hidden Map
+	Silver Locket
+	Old Diary
+	Golden Medallion
 ## Villain
-
-TODO: Identify and briefly describe the villain.
-
+The villain in Haunted Mansion Adventure is a dangerous ghost who haunts the abandoned mansion. The ghost roams through the mansion and tries to prevent the player from escaping. If the player enters the Attic, where the ghost lives, before collecting all six items, the player loses the game. The ghost creates danger and makes it harder for the player to explore the mansion safely.
 ## Storyboard and Map Check
 
 Before submitting, compare this storyboard with `game_map.drawio`.

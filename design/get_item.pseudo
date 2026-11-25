@@ -9,22 +9,39 @@
 
 START get_item
 
-    # TODO 1: Identify the information the get-item process needs.
-    # Consider the current room, item in that room, and player's inventory.
+ # TODO 1: Identify the information the get-item process needs.
+SET currentRoom = player's current room
+SET roomItem = item located in the current room
+SET requestedItem = ""
 
-    # TODO 2: Prompt for and receive the player's get-item command.
+# TODO 2: Prompt for and receive the player's get-item command.
+OUTPUT "Enter the name of the item you want to collect:"
+INPUT requestedItem
 
-    # TODO 3: Validate whether the requested item is available in the current
-    # room. Show the decision clearly.
+# TODO 3: Validate whether the requested item is available in the current room.
+IF roomItem is not empty AND requestedItem = roomItem THEN
 
     # TODO 4: Describe what happens when the item request is valid.
-    # Include the inventory update and player output.
+    ADD roomItem to inventory
+    SET roomItem = empty
+    OUTPUT "You collected the " + requestedItem
+    OUTPUT "The item has been added to your inventory."
+
+    IF number of items in inventory = 6 THEN
+        OUTPUT "Congratulations! You collected all six items!"
+        OUTPUT "You escaped the Haunted Mansion!"
+        SET gameOver = TRUE
+    END IF
+
+ELSE
 
     # TODO 5: Describe what happens when the item request is invalid.
-    # Include the output the player should receive.
+    OUTPUT "That item is not available in this room. Please try again."
 
-    # TODO 6: Show how the process returns to or continues the larger gameplay
-    # loop after the command is handled.
+END IF
+
+# TODO 6: Return to the larger gameplay loop.
+OUTPUT "Return to the main gameplay loop."
 
 END get_item
 

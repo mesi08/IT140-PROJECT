@@ -7,19 +7,45 @@
 # Write pseudocode, not Python code. Use clear indentation and course-appropriate
 # keywords such as INPUT, OUTPUT, IF, ELSE, WHILE, SET, or similar terms.
 
-# TODO 1: Identify the information the movement process needs.
-# Consider the player's current room and movement command.
+TODO 1: Identify the information the movement process needs.
 
-# TODO 2: Prompt for and receive the player's movement command.
+SET currentRoom = "Entrance Foyer"
+SET movementCommand = ""
+SET gameOver = FALSE
+SET inventory = empty list
 
-# TODO 3: Validate whether the requested movement is possible from the
-# current room. Show the decision clearly.
+TODO 2: Prompt for and receive the player's movement command.
 
-# TODO 4: Describe what happens when the movement command is valid.
-# Include the room update and player output.
+WHILE gameOver = FALSE
+OUTPUT "You are currently in the " + currentRoom
+OUTPUT "Enter a direction (North, South, East, or West): "
+INPUT movementCommand
 
-# TODO 5: Describe what happens when the movement command is invalid.
-# Include the output the player should receive.
+TODO 3: Validate whether the requested movement is possible from the current room.
 
-# TODO 6: Show how movement fits into repeated gameplay.
-# The final game continues accepting commands until a required ending occurs.
+IF movementCommand is a valid direction from currentRoom THEN
+
+TODO 4: Describe what happens when the movement command is valid.
+
+    SET currentRoom = connected room in the requested direction
+    OUTPUT "You moved to the " + currentRoom
+
+    IF currentRoom = "Attic" AND number of items in inventory &lt; 6 THEN
+        OUTPUT "The ghost has caught you! Game over."
+        SET gameOver = TRUE
+    ELSE IF number of items in inventory = 6 THEN
+        OUTPUT "Congratulations! You collected all six items!"
+        OUTPUT "You escaped the Haunted Mansion!"
+        SET gameOver = TRUE
+    END IF
+
+ELSE
+
+TODO 5: Describe what happens when the movement command is invalid.
+
+    OUTPUT "You cannot move in that direction. Please try again."
+END IF
+
+TODO 6: Show how movement fits into repeated gameplay.
+
+END WHILE
